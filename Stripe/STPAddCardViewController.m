@@ -259,6 +259,9 @@ typedef NS_ENUM(NSUInteger, STPPaymentCardSection) {
     [self stp_beginObservingKeyboardAndInsettingScrollView:self.tableView
                                              onChangeBlock:nil];
     [[self firstEmptyField] becomeFirstResponder];
+    if (self.prefilledCardInformation != nil) {
+        self.paymentCell.paymentField.cardParams = self.prefilledCardInformation;
+    }
 }
 
 - (UIResponder *)firstEmptyField {

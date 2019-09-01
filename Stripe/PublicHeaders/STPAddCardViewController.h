@@ -49,7 +49,12 @@ NS_ASSUME_NONNULL_BEGIN
  You can set this property to pre-fill any information you've already collected from your user. @see STPUserInformation.h
  */
 @property (nonatomic, strong, nullable) STPUserInformation *prefilledInformation;
-
+    
+/**
+ You can set this property to pre-fill any information you've already collected from your user. @see STPCardParams.h
+ */
+@property (nonatomic, strong, nullable) STPCardParams *prefilledCardInformation;
+    
 /**
  Provide this view controller with a footer view.
 
