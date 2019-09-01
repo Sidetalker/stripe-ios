@@ -16,6 +16,7 @@
 #import "STPPaymentConfiguration.h"
 #import "STPTheme.h"
 #import "STPUserInformation.h"
+#import "STPPaymentMethodCardParams.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -53,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  You can set this property to pre-fill any information you've already collected from your user. @see STPCardParams.h
  */
-@property (nonatomic, strong, nullable) STPCardParams *prefilledCardInformation;
+@property (nonatomic, strong, nullable) STPPaymentMethodCardParams *prefilledCardInformation;
     
 /**
  Provide this view controller with a footer view.
