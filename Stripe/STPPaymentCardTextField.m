@@ -676,7 +676,7 @@ CGFloat const STPPaymentCardTextFieldMinimumPadding = 10;
     self.internalCardParams = [desiredCardParams copy];
 
     [self setText:desiredCardParams.number inField:STPCardFieldTypeNumber];
-    BOOL expirationPresent = desiredCardParams.expMonth && desiredCardParams.expYear;
+    BOOL expirationPresent = desiredCardParams.expMonth != 0 && desiredCardParams.expYear != 0;
     if (expirationPresent) {
         NSString *text = [NSString stringWithFormat:@"%02lu%02lu",
                           (unsigned long)desiredCardParams.expMonth.integerValue,
